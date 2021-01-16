@@ -1,0 +1,177 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:helpers="clr-namespace:NCS.Client.WPF.Helpers"
+                    xmlns:converters="clr-namespace:Azir.Modbus.Client.WPF.Resources.Converters"
+                    xmlns:validations="clr-namespace:Azir.Modbus.Client.WPF.Resources.Validations">
+
+    <!-- 
+    ***************************************************************************
+    Typography（字体排版）
+    ***************************************************************************
+    -->
+
+    <FontFamily x:Key="PrimaryFontFamily">.\Fonts\#Segoe UI</FontFamily>
+
+    <!-- 
+    ***************************************************************************
+    Image Sources
+    ***************************************************************************
+    -->
+
+    <BitmapImage x:Key="DeleteXImageSource" UriSource=".\Images\delete_x.png"/>
+    <BitmapImage x:Key="GripImageSource" UriSource=".\Images\grip.png"/>
+    <BitmapImage x:Key="WarningImageSource" UriSource=".\Images\warning.png"/>
+
+    <!-- 
+    ***************************************************************************
+    ImageBrushs
+    ***************************************************************************
+    -->
+
+    <ImageBrush x:Key="LogoImageBrush" ImageSource=".\Images\MainView\Logo.jpg"/>
+
+    <ImageBrush x:Key="MainWindowsBackGroundImageBrush" ImageSource=".\Images\MainView\mainWindows_background.png"/>
+    <ImageBrush x:Key="BackgroundGreen0ImageBrush" ImageSource=".\Images\MainView\backgroundGreen01.jpg"/>
+    <ImageBrush x:Key="Backgroundbule01ImageBrush" ImageSource=".\Images\MainView\backgroundbule01.jpg"/>
+    <ImageBrush x:Key="Backgroundbule02ImageBrush" ImageSource=".\Images\MainView\backgroundbule02.jpg"/>
+
+    <ImageBrush x:Key="ClosedAppButtonEnterImageBrush" ImageSource=".\Images\Button\closeBtnEnter.png"/>
+    <ImageBrush x:Key="ClosedAppButtonMoveImageBrush" ImageSource=".\Images\Button\closeBtnMove.png"/>
+    <ImageBrush x:Key="ClosedAppButtonNomalImageBrush" ImageSource=".\Images\Button\closeBtnNomal.png"/>
+
+    <ImageBrush x:Key="MaxWindowButtonEnterImageBrush" ImageSource=".\Images\Button\maxBtnEnter.png"/>
+    <ImageBrush x:Key="MaxWindowButtonMoveImageBrush" ImageSource=".\Images\Button\maxBtnMove.png"/>
+    <ImageBrush x:Key="MaxWindowButtonNomalImageBrush" ImageSource=".\Images\Button\maxBtnNomal.png"/>
+
+    <ImageBrush x:Key="MinWindowButtonEnterImageBrush" ImageSource=".\Images\Button\minBtnEnter.png"/>
+    <ImageBrush x:Key="MinWindowButtonMoveImageBrush" ImageSource=".\Images\Button\minBtnMove.png"/>
+    <ImageBrush x:Key="MinWindowButtonNomalImageBrush" ImageSource=".\Images\Button\minBtnNomal.png"/>
+
+    <ImageBrush x:Key="MenuButtonEnterImageBrush" ImageSource=".\Images\Button\menuBtnEnter.png"/>
+    <ImageBrush x:Key="MenuButtonMoveImageBrush" ImageSource=".\Images\Button\menuBtnMove.png"/>
+    <ImageBrush x:Key="MenuButtonNomalImageBrush" ImageSource=".\Images\Button\menuBtnNomal.png"/>
+
+    <ImageBrush x:Key="SkinButtonEnterImageBrush" ImageSource=".\Images\Button\skinBtnEnter.png"/>
+    <ImageBrush x:Key="SkinButtonMoveImageBrush" ImageSource=".\Images\Button\skinBtnMove.png"/>
+    <ImageBrush x:Key="SkinButtonNomalImageBrush" ImageSource=".\Images\Button\skinBtnNomal.png"/>
+
+    <ImageBrush x:Key="TabalItemIsMouseMoveUpImageBrush" ImageSource=".\Images\MainView\mouseMoveUp.png"/>
+    <ImageBrush x:Key="TabalItemIsSelectImageBrush" ImageSource=".\Images\MainView\beSelect.png"/>
+
+    <ImageBrush x:Key="NumericalControlImageBrush" ImageSource=".\Images\MainView\NumericalControl.png"/>
+    <ImageBrush x:Key="SystemConfigImageBrush" ImageSource=".\Images\MainView\SystemConfig.png"/>
+
+    <!-- 
+    ***************************************************************************
+    Brushes
+    ***************************************************************************
+    -->
+
+    <helpers:ColorList x:Key="FolderColors">
+        <Color>#00acff</Color>
+        <Color>#357e7f</Color>
+        <Color>#529010</Color>
+        <Color>#b1c70c</Color>
+        <Color>#ffc211</Color>
+        <Color>#fb791a</Color>
+        <Color>#f24e22</Color>
+        <Color>#da1a4c</Color>
+        <Color>#00FFFFFF</Color>
+    </helpers:ColorList>
+
+    <DrawingBrush x:Key="MyWireBrushResource" Viewport="0,0,10,10" ViewportUnits="Absolute" TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <GeometryDrawing Geometry="M0,0 L1,0 1,0.1, 0,0.1Z" Brush="#66CCCCFF" />
+                    <GeometryDrawing Geometry="M0,0 L0,1 0.1,1, 0.1,0Z" Brush="#66CCCCFF" />
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <LinearGradientBrush x:Key="BlackToGrayBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.0" Color="Black" />
+            <GradientStop Offset="1.0" Color="#666666" />
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="WhiteSmokeBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.0" Color="WhiteSmoke" />
+            <GradientStop Offset="1.0" Color="#666666" />
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="WhiteSmokeToGrayBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.0" Color="WhiteSmoke" />
+            <GradientStop Offset="2." Color="Black" />
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+    <!-- 
+    ***************************************************************************
+    Geometry
+    ***************************************************************************
+    -->
+
+    <Geometry x:Key="DownArrow">M0,0 L1,0 0.5,1Z</Geometry>
+    <Geometry x:Key="UpArrow">M0,1 L1,1 0.5,0Z</Geometry>
+    <Geometry x:Key="RightArrow">M0,0 L1,0.5 0,1Z</Geometry>
+    <Geometry x:Key="LeftArrow">M0,0.5 L1,1 1,0Z</Geometry>
+    <Geometry x:Key="CloseX">M0,0 L1,1 M0,1 L1,0</Geometry>
+    <Geometry x:Key="HorizontalLine">M0,0 L0,1</Geometry>
+    <Geometry x:Key="VerticalLine">M0,0 L1,0</Geometry>
+    <Geometry x:Key="LeftRightDiagonalLine">M0,0 L1,1</Geometry>
+    <Geometry x:Key="RightLeftDiagonalLine">M1,0 L0,1</Geometry>
+    <Geometry x:Key="RightTriangle">M0,0 L0,1 L1,1Z</Geometry>
+    <Geometry x:Key="LeftTriangle">M1,0 L1,1 L0,1Z</Geometry>
+    <Geometry x:Key="LeftTriangleFlipped">M1,1 L1,0 L0,0Z</Geometry>
+    <Geometry x:Key="Gear">M363.6,569.5C355.6,583.4,337.9,588.1,324.0,580.1C310.2,572.1,305.4,554.4,313.4,540.5C321.4,526.7,339.2,521.9,353.0,529.9C366.9,537.9,371.6,555.7,363.6,569.5 M404.4,533.1L390.4,509.0L404.3,478.5L371.9,459.8L352.5,487.1L324.6,487.1L305.1,459.8L272.7,478.5L286.6,509.0L272.7,533.1L239.3,536.3L239.3,573.7L272.7,576.9L286.6,601.1L272.7,631.6L305.1,650.3L324.6,623.0L352.5,623.0L371.9,650.3L404.3,631.6L390.4,601.1L404.4,576.9L437.7,573.7L437.7,536.3z</Geometry>
+
+    <!-- 
+    ***************************************************************************
+    Converters
+    ***************************************************************************
+    -->
+
+    <converters:ReverseBooleanToVisibilityConverter x:Key="ReverseBooleanToVisibilityConverter" />
+    <converters:ReverseBooleanConverter x:Key="ReverseBooleanConverter"/>
+    <converters:DateTimeToStringConverter x:Key="DateTimeToStringConverter" />
+    <converters:DatePointTypeToVisibilityConverter x:Key="DatePointTypeToVisibilityConverter" />
+
+    <!-- 
+    ***************************************************************************
+    Validations
+    ***************************************************************************
+    -->
+    <validations:NotNullValidationRule x:Key="NotNullValidationRule" />
+    <validations:IPAddressRule x:Key="IPAddressRule" />
+
+    <!-- 
+    ***************************************************************************
+    Controls
+    ***************************************************************************
+    -->
+
+    <!-- InvisibleButton -->
+
+    <Style x:Key="InvisibleButton" TargetType="{x:Type Button}">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Border" Background="Transparent">
+                        <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

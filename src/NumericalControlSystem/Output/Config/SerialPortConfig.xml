@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SerialPort>
+  <PortName Value="COM1" />
+  <BaudRate Value="9600" />
+  <Parity Value="Odd" />
+  <DataBits Value="8" />
+  <StopBits Value="One" />
+  <ReadTimeout Value="-1" />
+  <WriteTimeout Value="-1" />
+</SerialPort>

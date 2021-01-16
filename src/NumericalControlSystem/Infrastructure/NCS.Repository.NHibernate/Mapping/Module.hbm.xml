@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="NCS.Model.Module"
+        assembly="NCS.Model">
+  
+  <class name="NCS.Model.Module.Module" table="numericalcontrolsystem.module" lazy="true" >
+    <id name="Id" column="ModuleId"  type="Int32" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="Number" type="Int32">
+      <column name="Number" sql-type="int" not-null="true" />
+    </property>
+    <property name="Name" type="String">
+      <column name="Name" sql-type="nvarchar"/>
+    </property>
+    <property name="Description" type="String">
+      <column name="Description" sql-type="nvarchar"/>
+    </property>
+    <!--<bag name="DataPoints" inverse="true" cascade="all">
+      <key column="ModuleId" not-null="true"/>
+      <one-to-many class="NCS.Model.DataPoint.DataPoint"/>
+    </bag>-->
+
+    <!--<set name="DataPoints"  
+         table="numericalcontrolsystem.datapoint" generic="true"
+         access="field.camelcase-underscore"
+         inverse="true" 
+         cascade="all-delete-orphan"
+         lazy="true" >
+      <key column="ModuleId" not-null="true"/>
+      <one-to-many class="NCS.Model.DataPoint.DataPoint,NCS.Model"/>
+    </set>-->
+
+    <bag name="DataPoints"  
+         access="field.camelcase-underscore"
+         inverse="true" 
+         cascade="all"
+         lazy="true">
+      <key column="ModuleId"/>
+      <one-to-many class="NCS.Model.DataPoint.DataPoint,NCS.Model"/>
+    </bag>
+    
+  </class>
+</hibernate-mapping>

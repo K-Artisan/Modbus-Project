@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="NCS.Client.WPF.View.SerialPortConfigerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="190" Width="180">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel  VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                    <TextBlock Text="串   口" Width="50" VerticalAlignment="Center"/>
+                    <ComboBox Name="cbPorts" Width="120" VerticalAlignment="Center" IsEditable="True" 
+                          Text="{Binding PortName, Mode=TwoWay}" 
+                          IsEnabled="{Binding SerialPortConnecting,Converter={StaticResource ReverseBooleanConverter}}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                    <TextBlock Text="波特率" Width="50" VerticalAlignment="Center"/>
+                    <ComboBox Name="cbBaudRate" Width="120" VerticalAlignment="Center"
+                          Text="{Binding BaudRate,Mode=TwoWay}"
+                          IsEnabled="{Binding SerialPortConnecting,Converter={StaticResource ReverseBooleanConverter}}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                    <TextBlock Text="校验位" Width="50" VerticalAlignment="Center"/>
+                    <ComboBox Name="cbParity" Width="120" VerticalAlignment="Center"
+                          Text="{Binding Parity,Mode=TwoWay}"
+                          IsEnabled="{Binding SerialPortConnecting,Converter={StaticResource ReverseBooleanConverter}}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                    <TextBlock Text="数据位" Width="50" VerticalAlignment="Center"/>
+                    <ComboBox Name="cbDataBits" Width="120" VerticalAlignment="Center"
+                          Text="{Binding DataBits,Mode=TwoWay}"
+                          IsEnabled="{Binding SerialPortConnecting,Converter={StaticResource ReverseBooleanConverter}}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                    <TextBlock Text="停止位" Width="50" VerticalAlignment="Center"/>
+                    <ComboBox Name="cbStopBit" Width="120" VerticalAlignment="Center"
+                          Text="{Binding StopBits,Mode=TwoWay}"
+                          IsEnabled="{Binding SerialPortConnecting,Converter={StaticResource ReverseBooleanConverter}}"/>
+                </StackPanel>
+                <WrapPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                    <!--<Image x:Name="imgConnectionStatus" ToolTip="串口状态"  
+                       Source="NCS.Client.WPF;component/Resources/Images/unconnect.png" 
+                       Width="25" Height="25"/>-->
+                    <Image x:Name="imgConnectionStatus" ToolTip="{Binding SerialPortConnectStatusTip}"  
+                       Source="{Binding SerialPortConnectStatusImage}" 
+                       Width="25" Height="25"/>
+                    <Button Name="btOpenSerialPort"  Content="{Binding OpenOrCloseString}" 
+                            Width="70" Height="30" VerticalAlignment="Center" Margin="75,0,0,0"
+                        Command="{Binding OpenOrCloseSerialPortCommand}"/>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

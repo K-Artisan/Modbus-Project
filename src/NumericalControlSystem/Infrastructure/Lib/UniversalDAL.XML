@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UniversalDAL</name>
+    </assembly>
+    <members>
+        <member name="M:UniversalDAL.DbUtility.TestConnection">
+            <summary>
+            测试打开数据库是否正常
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.CreateDbCommand(System.String,System.Data.CommandType,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            创建Command对象
+            </summary>
+            <param name="sql">要执行的SQL语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <param name="parameters">执行的SQL语句所需要的参数</param>
+            <returns>Command对象</returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.OpenConnection(System.Data.Common.DbConnection)">
+            <summary>
+            打开连接
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteNonQuery(System.String)">
+            <summary>
+            对数据库进行增删改操作，返回受影响的行数
+            </summary>
+            <param name="sql">执行增删改操作的SQL语句</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteNonQuery(System.String,System.Data.CommandType)">
+            <summary>
+            对数据库进行增删改操作，返回受影响的行数
+            </summary>
+            <param name="sql">执行增删改操作的SQL语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteNonQuery(System.String,System.Data.CommandType,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            对数据库进行增删改操作，返回受影响的行数
+            </summary>
+            <param name="sql">执行增删改操作的SQL语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <param name="parameters">所需要的参数</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteReader(System.String)">
+            <summary>
+            执行一条查询语句，返回一个DataReader实例
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteReader(System.String,System.Data.CommandType)">
+            <summary>
+            执行一条查询语句，返回一个DataReader实例
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteReader(System.String,System.Data.CommandType,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行一条查询语句，返回一个DataReader实例
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <param name="parameters">所需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteDataTable(System.String)">
+            <summary>
+            执行一条查询语句，返回一个包含查询结果的DataTable
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteDataTable(System.String,System.Data.CommandType)">
+            <summary>
+            执行一条查询语句，返回一个包含查询结果的DataTable
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteDataTable(System.String,System.Data.CommandType,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行一条查询语句，返回一个包含查询结果的DataTable
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <param name="parameters">所需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteScalar(System.String)">
+            <summary>
+            执行一条查询语句，返回查询结果的首行首列
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteScalar(System.String,System.Data.CommandType)">
+            <summary>
+            执行一条查询语句，返回查询结果的首行首列
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteScalar(System.String,System.Data.CommandType,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行一条查询语句，返回查询结果的首行首列
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <param name="parameters">所需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteScalar(System.Data.Common.DbCommand,System.String,System.Data.CommandType,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            执行一条查询语句，返回查询结果的首行首列
+            </summary>
+            <param name="sql">要执行的查询语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <param name="parameters">所需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalDAL.DbUtility.ExecuteNonQuery(System.Data.Common.DbCommand,System.String,System.Data.CommandType,System.Collections.Generic.IList{System.Data.Common.DbParameter})">
+            <summary>
+            对数据库进行增删改操作，返回受影响的行数
+            </summary>
+            <param name="sql">执行增删改操作的SQL语句</param>
+            <param name="commandType">执行的SQL语句的类型</param>
+            <param name="parameters">所需要的参数</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UniversalDAL.ProviderFactory.#cctor">
+            <summary>
+            静态构造函数（加载已知的数据库访问类的程序集）
+            </summary>
+        </member>
+        <member name="M:UniversalDAL.ProviderFactory.GetProviderInvariantName(UniversalDAL.DbProviderType)">
+            <summary>
+            获取指定数据库类型对应的程序集名称
+            </summary>
+            <param name="dbProviderType">数据库类型名称</param>
+            <returns>程序集名称</returns>
+        </member>
+        <member name="M:UniversalDAL.ProviderFactory.ImportDbProviderFactory(UniversalDAL.DbProviderType)">
+            <summary>
+            加载指定数据库类型的DbProviderFactory
+            </summary>
+            <param name="dbProviderType">数据库类型名称</param>
+            <returns>DbProviderFactory</returns>
+        </member>
+        <member name="M:UniversalDAL.ProviderFactory.GetDbProviderFactory(UniversalDAL.DbProviderType)">
+            <summary>
+            获取指定数据库类型对应的DbProviderFactory
+            </summary>
+            <param name="dbProviderType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Easy5.WPF.Controls.ToggleSwitchButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="36" d:DesignWidth="96">
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent"
+          Width="96" Height="36">
+        <Border BorderBrush="BurlyWood"
+                BorderThickness="2" Margin="4,2"
+                Padding="4">
+            <Rectangle Name="fillRectangle"
+                       Fill="Red"
+                       Visibility="Collapsed"/>
+        </Border>
+        <Border Name="slideBorder"
+                BorderBrush="DarkGray"
+                BorderThickness="4,0"
+                HorizontalAlignment="Left">
+            <Rectangle Stroke="Black"
+                       Fill="Black"
+                       StrokeThickness="2"
+                       Width="20"/>
+            
+        </Border>
+    </Grid>
+</UserControl>

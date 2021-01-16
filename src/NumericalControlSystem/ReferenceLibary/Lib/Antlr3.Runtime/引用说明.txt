@@ -1,0 +1,1 @@
+在用NHibernata时不引用该dll有异常

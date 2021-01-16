@@ -1,0 +1,169 @@
+﻿<UserControl x:Class="NCS.Client.WPF.View.DataPointMonitorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:component="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="GroupByModuleNameView" Source="{Binding DataPoints}">
+            <CollectionViewSource.SortDescriptions>
+                <component:SortDescription PropertyName="Number" Direction="Ascending"/>
+            </CollectionViewSource.SortDescriptions>
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="ModuleName"/>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Height="30">
+            <CheckBox x:Name="CbFoldDateDetailes" Content="全部展开" VerticalAlignment="Center" Width="100" />
+            <!--<Button Content="设置" Command="{Binding SetValueToModusCommand}" Width="50" Height="25" VerticalAlignment="Center" Margin="5"/>-->
+        </StackPanel>
+        <Grid  Grid.Row="1" >
+            <DataGrid x:Name="DgDataPiontInformation" AutoGenerateColumns="False"
+                      ItemsSource="{Binding Source={StaticResource GroupByModuleNameView}}"
+                      SelectedItem="{Binding SeleteItem, Mode=OneWayToSource}"
+                      CanUserAddRows="False" CanUserDeleteRows="False" 
+                      IsReadOnly="True"
+                      >
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <Border  BorderBrush="SeaGreen" Background="CadetBlue"
+                                BorderThickness="1" 
+                                CornerRadius="2">
+                            <Grid Margin="10" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.5*" />
+                                    <RowDefinition Height="0.5*" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" FontSize="10" 
+                                    MaxWidth="300" TextAlignment="Left">
+                                </TextBlock>
+                                <StackPanel  VerticalAlignment="Top">
+                                    <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top">
+                                        <TextBlock Text="数据点编号" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding Number}" Width="150" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                                        <TextBlock Text="名称" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding Name}" MaxWidth="300" TextWrapping="Wrap" Width="150" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top">
+                                        <TextBlock Text="设备地址" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding DeviceAddress}" Width="150" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top">
+                                        <TextBlock Text="起始寄存器" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding StartRegisterAddress}" Width="150" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top">
+                                        <TextBlock Text="数据类型" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding DataType}" Width="150" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top">
+                                        <TextBlock Text="数据点类型" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding DataPointType}" Width="160" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top">
+                                        <TextBlock Text="所属模块编号" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding ModuleNumber}" Width="150" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top">
+                                        <TextBlock Text="模块名称" Width="100" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding ModuleName}" Width="150" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid> 
+                        </Border>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+                <DataGrid.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.ContainerStyle>
+                            <Style TargetType="{x:Type GroupItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type GroupItem}">
+                                            <Expander IsExpanded="{Binding ElementName=CbFoldDateDetailes, Path=IsChecked, Mode=OneWay}">
+                                                <Expander.Header>
+                                                    <TextBlock Text="{Binding Path=Name}" Foreground="White"
+                                                               FontWeight="Bold" Background="Black" FontSize="16"
+                                                               HorizontalAlignment="Left"
+                                                               Margin="0,0,0,0" Padding="2" MaxWidth="200" Height="30"/>
+                                                </Expander.Header>
+                                                <ItemsPresenter />
+                                            </Expander>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GroupStyle.ContainerStyle>
+                        <GroupStyle.Panel>
+                            <ItemsPanelTemplate>
+                                <DataGridRowsPresenter/>
+                            </ItemsPanelTemplate>
+                        </GroupStyle.Panel>
+                        <!--<GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Name}" Foreground="White"
+                                           FontWeight="Bold" Background="Black" FontSize="16"
+                                           HorizontalAlignment="Left"
+                                           Margin="0,0,0,0" Padding="2" MaxWidth="200" Height="30"/>
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>-->
+                    </GroupStyle>
+                </DataGrid.GroupStyle>
+                <DataGrid.Columns>
+                    <!--<DataGridTemplateColumn Header="ID">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Number}" Foreground="White" Background="Black" FontWeight="Bold"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>-->
+                    <DataGridTemplateColumn Header="名称">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <!--<DataGridTextColumn Header="设备地址" Binding="{Binding Path=DeviceAddress}"/>-->
+                    <!--<DataGridTextColumn Header="寄存器号" Binding="{Binding Path=StartRegisterAddress}"/>-->
+                    <!--<DataGridTextColumn Header="数据类型" Binding="{Binding Path=DataType}"/>-->
+                    <!--<DataGridTextColumn Header="数据点类型" Binding="{Binding Path=DataPointType}"/>
+                    <DataGridTextColumn Header="描述" Binding="{Binding Path=Description}"/>-->
+                    <DataGridTemplateColumn Header="实时数据">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding RealTimeValue}" VerticalAlignment="Center"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Header="设置值">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                            <!--Visibility="{Binding DataPointType, Converter={StaticResource DatePointTypeToVisibilityConverter}}"-->
+                                    <TextBox Text="{Binding Path=ValueToSet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="90" VerticalAlignment="Center" Margin="5"/>
+                                    <!--在DataGird中的Button帮Commad无效，现在用Click事件代替-->
+                                    <Button Content="设置" Command="{Binding SetValueToModusCommand}" Width="50" Height="25" 
+                                            VerticalAlignment="Center" Margin="5" 
+                                            Click="SetValueToModus_OnClick"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source=".\NCSCommonResource.xaml"/>
+        <ResourceDictionary Source=".\Themes\ThemesResource.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

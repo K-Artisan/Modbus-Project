@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ModbusServer.CmeManager">
+    <Position X="5.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAMAAAKIAAAABCAABCAEAASAgYGAMIAQAQIASIAQ=</HashCode>
+      <FileName>CmeManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Modbus" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ModbusServer.CMEquipment">
+    <Position X="3.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAACAAwEQAFAIACAAABAIAAAAABAAAACAEgAAAAAIA=</HashCode>
+      <FileName>CMEquipment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CmeManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ModbusServer.DataPoint">
+    <Position X="1" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EggAAIAQAAIAAAQCAAAAAgIAEAAAQAQAAQgAAAAAACA=</HashCode>
+      <FileName>DataPoint.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CMEquipment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ModbusServer.IDEquipRes">
+    <Position X="6" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAIAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAAgAA=</HashCode>
+      <FileName>IDEquipRes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.IDModel">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIAAAAAAAQAAAAAAAAAAABAAAQAQAAAAAAgAA=</HashCode>
+      <FileName>IDModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.Modbus">
+    <Position X="7.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAIAQAAAAAAABAAAADAAAIACAAAAABABABIAAAAA=</HashCode>
+      <FileName>Modbus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.TcpDataPacket" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAEAAAAAAQAAAAAQAAgAAAAAASIAAQAQAAgAAAAA=</HashCode>
+      <FileName>ModbusDataStruct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.ModbusSendDataStruct" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAEAIAAgAAAAIAAAAgEAAAAAAAAAAAAAAgABAAAA=</HashCode>
+      <FileName>ModbusDataStruct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.ModbusRecvDataStruct" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEACAEAAAAgAACAoAEAAAEBAAACAAAAggEAAAAAAAAA=</HashCode>
+      <FileName>ModbusDataStruct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.ModbusUpDataBase" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAQABAAQADAUAAAABACAABAAAAAAAAAA=</HashCode>
+      <FileName>ModbusUpDataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.Program" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.ModbusRegister" Collapsed="true">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAAAAJAAAAQAAAgAAAAIABBAARQAQAAQAAAAAAAAA=</HashCode>
+      <FileName>TCPModBusServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.TCPModBusServer" Collapsed="true">
+    <Position X="12.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgAIAIIAAAlCAAEBRAABAIACAQEElgAAEIAADBAQ=</HashCode>
+      <FileName>TCPModBusServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModbusServer.UpDataEventArgs">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>TCPModBusServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.EventArgs" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="宋体" Size="10" />
+</ClassDiagram>

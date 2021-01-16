@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.Modbus.TCP", "Azir.Modbus.TCP\Azir.Modbus.TCP.csproj", "{40A80D0A-4DC5-45B6-BF6D-4A4F139305FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.Modbus.Protocol", "Azir.Modbus.Protocol\Azir.Modbus.Protocol.csproj", "{466A2330-6A02-4F85-A3AC-87DFEDE17A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.Modbus.RTU", "Azir.Modbus.RTU\Azir.Modbus.RTU.csproj", "{22E49D45-9002-4B4B-89A0-A827AE6967E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.Modbus.Common", "Azir.Modbus.Common\Azir.Modbus.Common.csproj", "{D956CBE4-E0F1-4DE4-AA82-CC6516F5A97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.ModbusServer.TCP", "Azir.ModbusServer.TCP\Azir.ModbusServer.TCP.csproj", "{B46A8348-C19F-478C-B892-DF1522DAA298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.ModbusServer.TCP.Test", "Azir.ModbusServer.TCP.Test\Azir.ModbusServer.TCP.Test.csproj", "{02907A9A-2FDB-42E8-BF90-94EF99BE3046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.ModbusServer.RTU", "Azir.ModbusServer.RTU\Azir.ModbusServer.RTU.csproj", "{E76DD20D-444F-4ADC-BF50-FE915DA68A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azir.ModbusServer.RTU.Test", "Azir.ModbusServer.RTU.Test\Azir.ModbusServer.RTU.Test.csproj", "{7720FB80-12A7-42E3-BCB4-895D8E268996}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 ModbusComm", "01 ModbusComm", "{FF014B71-0CA3-4FA7-9B57-9A4A90C7C7A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 ModbusRTU", "02 ModbusRTU", "{7CBF5704-FDC4-4B69-B3AA-9AABBFAE04EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 ModbusTCP", "03 ModbusTCP", "{0AABFE55-6DE7-4A21-999E-80E9506EEBA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Test", "04 Test", "{8985DA62-8C36-45A4-81D0-A08356235269}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://keasy5.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Azir.Modbus.RTU\\Azir.Modbus.RTU.csproj
+		SccProjectTopLevelParentUniqueName1 = Azir.Modbus.sln
+		SccProjectName1 = Azir.Modbus.RTU
+		SccLocalPath1 = Azir.Modbus.RTU
+		SccProjectUniqueName2 = Azir.Modbus.Protocol\\Azir.Modbus.Protocol.csproj
+		SccProjectTopLevelParentUniqueName2 = Azir.Modbus.sln
+		SccProjectName2 = Azir.Modbus.Protocol
+		SccLocalPath2 = Azir.Modbus.Protocol
+		SccProjectUniqueName3 = Azir.Modbus.TCP\\Azir.Modbus.TCP.csproj
+		SccProjectTopLevelParentUniqueName3 = Azir.Modbus.sln
+		SccProjectName3 = Azir.Modbus.TCP
+		SccLocalPath3 = Azir.Modbus.TCP
+		SccProjectUniqueName4 = Azir.Modbus.Common\\Azir.Modbus.Common.csproj
+		SccProjectTopLevelParentUniqueName4 = Azir.Modbus.sln
+		SccProjectName4 = Azir.Modbus.Common
+		SccLocalPath4 = Azir.Modbus.Common
+		SccProjectUniqueName5 = Azir.ModbusServer.TCP\\Azir.ModbusServer.TCP.csproj
+		SccProjectTopLevelParentUniqueName5 = Azir.Modbus.sln
+		SccProjectName5 = Azir.ModbusServer.TCP
+		SccLocalPath5 = Azir.ModbusServer.TCP
+		SccProjectUniqueName6 = Azir.ModbusServer.TCP.Test\\Azir.ModbusServer.TCP.Test.csproj
+		SccProjectTopLevelParentUniqueName6 = Azir.Modbus.sln
+		SccProjectName6 = Azir.ModbusServer.TCP.Test
+		SccLocalPath6 = Azir.ModbusServer.TCP.Test
+		SccProjectUniqueName7 = Azir.ModbusServer.RTU\\Azir.ModbusServer.RTU.csproj
+		SccProjectTopLevelParentUniqueName7 = Azir.Modbus.sln
+		SccProjectName7 = Azir.ModbusServer.RTU
+		SccLocalPath7 = Azir.ModbusServer.RTU
+		SccProjectUniqueName8 = Azir.ModbusServer.RTU.Test\\Azir.ModbusServer.RTU.Test.csproj
+		SccProjectTopLevelParentUniqueName8 = Azir.Modbus.sln
+		SccProjectName8 = Azir.ModbusServer.RTU.Test
+		SccLocalPath8 = Azir.ModbusServer.RTU.Test
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40A80D0A-4DC5-45B6-BF6D-4A4F139305FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A80D0A-4DC5-45B6-BF6D-4A4F139305FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A80D0A-4DC5-45B6-BF6D-4A4F139305FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A80D0A-4DC5-45B6-BF6D-4A4F139305FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{466A2330-6A02-4F85-A3AC-87DFEDE17A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466A2330-6A02-4F85-A3AC-87DFEDE17A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466A2330-6A02-4F85-A3AC-87DFEDE17A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466A2330-6A02-4F85-A3AC-87DFEDE17A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E49D45-9002-4B4B-89A0-A827AE6967E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E49D45-9002-4B4B-89A0-A827AE6967E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E49D45-9002-4B4B-89A0-A827AE6967E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E49D45-9002-4B4B-89A0-A827AE6967E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D956CBE4-E0F1-4DE4-AA82-CC6516F5A97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D956CBE4-E0F1-4DE4-AA82-CC6516F5A97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D956CBE4-E0F1-4DE4-AA82-CC6516F5A97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D956CBE4-E0F1-4DE4-AA82-CC6516F5A97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B46A8348-C19F-478C-B892-DF1522DAA298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B46A8348-C19F-478C-B892-DF1522DAA298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B46A8348-C19F-478C-B892-DF1522DAA298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B46A8348-C19F-478C-B892-DF1522DAA298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02907A9A-2FDB-42E8-BF90-94EF99BE3046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02907A9A-2FDB-42E8-BF90-94EF99BE3046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02907A9A-2FDB-42E8-BF90-94EF99BE3046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02907A9A-2FDB-42E8-BF90-94EF99BE3046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76DD20D-444F-4ADC-BF50-FE915DA68A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76DD20D-444F-4ADC-BF50-FE915DA68A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76DD20D-444F-4ADC-BF50-FE915DA68A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76DD20D-444F-4ADC-BF50-FE915DA68A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7720FB80-12A7-42E3-BCB4-895D8E268996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7720FB80-12A7-42E3-BCB4-895D8E268996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7720FB80-12A7-42E3-BCB4-895D8E268996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7720FB80-12A7-42E3-BCB4-895D8E268996}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40A80D0A-4DC5-45B6-BF6D-4A4F139305FA} = {0AABFE55-6DE7-4A21-999E-80E9506EEBA7}
+		{466A2330-6A02-4F85-A3AC-87DFEDE17A6D} = {FF014B71-0CA3-4FA7-9B57-9A4A90C7C7A6}
+		{22E49D45-9002-4B4B-89A0-A827AE6967E2} = {7CBF5704-FDC4-4B69-B3AA-9AABBFAE04EB}
+		{D956CBE4-E0F1-4DE4-AA82-CC6516F5A97E} = {FF014B71-0CA3-4FA7-9B57-9A4A90C7C7A6}
+		{B46A8348-C19F-478C-B892-DF1522DAA298} = {0AABFE55-6DE7-4A21-999E-80E9506EEBA7}
+		{02907A9A-2FDB-42E8-BF90-94EF99BE3046} = {8985DA62-8C36-45A4-81D0-A08356235269}
+		{E76DD20D-444F-4ADC-BF50-FE915DA68A30} = {7CBF5704-FDC4-4B69-B3AA-9AABBFAE04EB}
+		{7720FB80-12A7-42E3-BCB4-895D8E268996} = {8985DA62-8C36-45A4-81D0-A08356235269}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+﻿1.移动文件：
+NCSDataBase.tt及其POCO类到这程序集
+
+2.手动修改NCSDataBase.tt
+
+修改如下内容为const string inputFile：
+
+const string inputFile = @"../../../Infrastructure/NCS.Repository.EF/NSCDbContex.edmx";

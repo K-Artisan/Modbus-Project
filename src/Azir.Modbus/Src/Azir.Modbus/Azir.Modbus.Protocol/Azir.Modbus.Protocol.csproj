@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{466A2330-6A02-4F85-A3AC-87DFEDE17A6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Azir.Modbus.Protocol</RootNamespace>
+    <AssemblyName>Azir.Modbus.Protocol</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auxiliary\Compare.cs" />
+    <Compile Include="Auxiliary\RegisterCountCalculator.cs" />
+    <Compile Include="Configer\ModbusConfiger.cs" />
+    <Compile Include="Configer\ModbusConfig.cs" />
+    <Compile Include="DataAnalyzeMode.cs" />
+    <Compile Include="DataPoints\DataPoint.cs" />
+    <Compile Include="DataPoints\DataPointDataType.cs" />
+    <Compile Include="DataPoints\DataPointGrouper.cs" />
+    <Compile Include="DataPoints\DataPointProcessor.cs" />
+    <Compile Include="DataPoints\DataPointType.cs" />
+    <Compile Include="DataPoints\Module.cs" />
+    <Compile Include="DataReponse\AnalyzeRecivedDataReponse.cs" />
+    <Compile Include="DataReponse\ModbusRecivedDataAnalyzer.cs" />
+    <Compile Include="DataReponse\Register.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\CustomerRequstDataAuxiliary.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\FunNum01CustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\FunNum03CustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\FunNum05CustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\FunNum06CustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\FunNum15CustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\FunNum16CustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\ICustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\CustomerRequest\IGenericCustomerRequestData.cs" />
+    <Compile Include="FuncitonNum\FunctionNumType.cs" />
+    <Compile Include="FuncitonNum\ModbusRequest\FunNum01RequestDataBase.cs" />
+    <Compile Include="FuncitonNum\ModbusRequest\FunNum03RequestDataBase.cs" />
+    <Compile Include="FuncitonNum\ModbusRequest\FunNum05RequestDataBase.cs" />
+    <Compile Include="FuncitonNum\ModbusRequest\FunNum06RequestDataBase.cs" />
+    <Compile Include="FuncitonNum\ModbusRequest\FunNum15RequestDataBase.cs" />
+    <Compile Include="FuncitonNum\ModbusRequest\FunNum16RequestDataBase.cs" />
+    <Compile Include="FuncitonNum\ModbusRequest\IFunNumRequestDataBase.cs" />
+    <Compile Include="FuncitonNum\ModbusProtocolRule.cs" />
+    <Compile Include="IModbusProtocol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Azir.Modbus.Common\Azir.Modbus.Common.csproj">
+      <Project>{d956cbe4-e0f1-4de4-aa82-cc6516f5a97e}</Project>
+      <Name>Azir.Modbus.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configer\ModbusConfig.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

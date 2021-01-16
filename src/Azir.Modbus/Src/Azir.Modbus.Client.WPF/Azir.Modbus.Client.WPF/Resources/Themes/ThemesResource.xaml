@@ -1,0 +1,12 @@
+﻿<!--该文件是汇总所有的样式，便于NCSGeneric.xaml调用-->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source=".\SplitButtonResource.xaml"/>
+        <ResourceDictionary Source=".\TextBoxResource.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

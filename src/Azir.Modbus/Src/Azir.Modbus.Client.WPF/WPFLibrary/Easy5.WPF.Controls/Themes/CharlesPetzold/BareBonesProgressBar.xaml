@@ -1,0 +1,30 @@
+<!-- =======================================================
+      BareBonesProgressBar.xaml (c) 2006 by Charles Petzold
+     ======================================================= -->
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <ProgressBar Margin="50" HorizontalAlignment="Center" 
+                     Value="{Binding ElementName=scroll, Path=Value}">
+            <ProgressBar.Template>
+                <ControlTemplate>
+                    <StackPanel>
+                        <Rectangle Name="PART_Track"
+                                   Height="20" Width="300" Fill="Red" />
+
+                        <Rectangle Name="PART_Indicator"
+                                   Height="20" Fill="Blue" />
+                    </StackPanel>
+                </ControlTemplate>
+            </ProgressBar.Template>
+        </ProgressBar>
+
+        <ScrollBar Name="scroll" Orientation="Horizontal" 
+                   Minimum="0" Maximum="100"
+                   SmallChange="1" LargeChange="10" 
+                   Margin="50 0 50 0" />
+
+        <TextBlock Text="Manipulate ScrollBar to test ProgressBar"
+                   HorizontalAlignment="Center" />
+    </StackPanel>
+</Page>

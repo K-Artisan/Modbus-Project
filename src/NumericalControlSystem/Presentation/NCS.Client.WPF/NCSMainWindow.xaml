@@ -1,0 +1,79 @@
+﻿<dazzleUi:DazzleWindow x:Class="NCS.Client.WPF.NCSMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dazzleUi="clr-namespace:Easy5.WPF.DazzleUI.Controls;assembly=Easy5.WPF.DazzleUI"
+        xmlns:view="clr-namespace:NCS.Client.WPF.View"
+        WindowStartupLocation="CenterScreen"
+        Title="数字监控系统" Width="1024" Height="720">
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="Header" Height="60" />
+            <RowDefinition Name="Folders" Height="Auto" />
+            <RowDefinition Name="Tasks" Height="*" />
+            <RowDefinition Name="Visualization" Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="AboutButton" Click="AboutButton_Click" Grid.Row="0"/>
+        <ncsUserControls:NCSAbout x:Name="AboutBox"  
+                                  Grid.RowSpan="100" Grid.ColumnSpan="100" 
+                                  CloseRequested="About_CloseRequested"
+                                  Visibility="Collapsed"/>
+    </Grid>-->
+    <!--<Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <WrapPanel Orientation="Horizontal">
+                <view:DataPointInformationView Margin="20"/>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>-->
+
+    <Grid Background="{DynamicResource Backgroundbule01ImageBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="10,0,5,0">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="数字监控系统" HorizontalAlignment="Left"  VerticalAlignment="Top" Foreground="White" FontSize="11"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <dazzleUi:DazzleButton x:Name="BtnSkinWindows" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                       Width="27" Height="23" 
+                                       Background="{DynamicResource SkinButtonNomalImageBrush}"
+                                       MyMoverBrush="{DynamicResource SkinButtonMoveImageBrush}"
+                                       MyEnterBrush="{DynamicResource SkinButtonEnterImageBrush}"
+                                       Click="BtnSkinWindows_OnClick"/>
+
+                <dazzleUi:SplitButton x:Name="BtnMianMenu" Style="{DynamicResource MenuSplitButtonDropDownStyle}" 
+                                      HorizontalAlignment="Right" VerticalAlignment="Top" Width="27" Height="23" 
+                                      Mode="Dropdown" 
+						              Placement="Bottom"
+                                      Click="BtnBtnMianMenu_OnClick" 
+                                      Background="{DynamicResource MenuButtonNomalImageBrush}"/>
+                
+                <dazzleUi:DazzleButton x:Name="BtnMinWindows" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                       Width="27" Height="23" 
+                                       Background="{DynamicResource MinWindowButtonNomalImageBrush}"
+                                       MyMoverBrush="{DynamicResource MinWindowButtonMoveImageBrush}"
+                                       MyEnterBrush="{DynamicResource MinWindowButtonEnterImageBrush}"
+                                       Click="BtnMinWindows_OnClick"/>
+                <dazzleUi:DazzleButton x:Name="BtnMaxWindows" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                       Width="27" Height="23" 
+                                       Background="{DynamicResource MaxWindowButtonNomalImageBrush}"
+                                       MyMoverBrush="{DynamicResource MaxWindowButtonMoveImageBrush}"
+                                       MyEnterBrush="{DynamicResource MaxWindowButtonEnterImageBrush}"
+                                       Click="BtnMaxWindows_OnClick"/>
+                <dazzleUi:DazzleButton x:Name="BtnCloseApp" HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                       Width="27" Height="23" 
+                                       Background="{DynamicResource ClosedAppButtonNomalImageBrush}"
+                                       MyMoverBrush="{DynamicResource ClosedAppButtonMoveImageBrush}"
+                                       MyEnterBrush="{DynamicResource ClosedAppButtonEnterImageBrush}"
+                                       Click="BtnCloseApp_OnClick"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <view:NcsRootView/>
+            <!--<Rectangle Fill="{DynamicResource LogoImageBrush}"
+                       Width="100" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top"/>-->
+        </Grid>
+    </Grid>
+</dazzleUi:DazzleWindow>

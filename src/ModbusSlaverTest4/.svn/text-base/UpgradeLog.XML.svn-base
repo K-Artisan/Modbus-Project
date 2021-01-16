@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ModbusSlaverTest">
+</Property><Property Name="解决方案文件" Value="E:\wkWorkSpace\项目代码\ModbusSlaverTest\ModbusSlaverTest.sln">
+</Property><Property Name="用户选项文件" Value="E:\wkWorkSpace\项目代码\ModbusSlaverTest\ModbusSlaverTest.suo">
+</Property><Property Name="Date" Value="2011年9月19日">
+</Property><Property Name="Time" Value="10:06">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ModbusSlaverTest.sln" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ModbusSlaverTest.suo" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest.suo">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\ModbusSlaverTest.csproj" Description="项目文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\ModbusSlaverTest.csproj">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\ModbusSlaver.cs" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\ModbusSlaver.cs">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\ModbusSlaver.Designer.cs" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\ModbusSlaver.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\Program.cs" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\Program.cs">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\Properties\AssemblyInfo.cs" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\Properties\Resources.Designer.cs" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\Properties\Settings.Designer.cs" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\TCPSlaver.cs" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\TCPSlaver.cs">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\app.config" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\app.config">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\Properties\Settings.settings" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\ModbusSlaver.resx" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\ModbusSlaver.resx">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\Properties\Resources.resx" Description="文件已成功备份为 E:\wkWorkSpace\项目代码\ModbusSlaverTest\Backup\ModbusSlaverTest\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\ModbusSlaverTest.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="ModbusSlaverTest" Source="ModbusSlaverTest\ModbusSlaverTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ModbusSlaverTest.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="ModbusSlaverTest.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ModbusSlaverTest" Source="ModbusSlaverTest\ModbusSlaverTest.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

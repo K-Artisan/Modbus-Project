@@ -1,0 +1,8 @@
+<DBSetting>
+  <ConfigDBConnect>
+    <DBIP>127.0.0.1</DBIP>
+    <DBName>numericalcontrolsystem</DBName>
+    <DBUser>root</DBUser>
+    <DBPassWord>123456</DBPassWord>
+  </ConfigDBConnect>
+</DBSetting>

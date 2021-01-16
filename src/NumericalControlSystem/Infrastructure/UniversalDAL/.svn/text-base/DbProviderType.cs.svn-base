@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace UniversalDAL
+{
+    public enum DbProviderType
+    {
+        SqlServer,
+        OleDb,
+        ODBC,
+        Oracle,
+        MySql,
+        SQLite,
+        Firebird,
+        PostgreSql,
+        DB2,
+        Informix,
+        SqlServerCe
+    }
+}

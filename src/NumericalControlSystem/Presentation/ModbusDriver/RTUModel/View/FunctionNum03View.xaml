@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="ModbusDriver.RTUModel.View.FunctionNum03View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <TextBlock Name="txTitle" FontSize="14" FontWeight="DemiBold"  VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                <TextBlock Text="设备地址" Width="70" VerticalAlignment="Center"/>
+                <TextBox Name="tbDeviceAddress" Text="1" Width="100" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                <TextBlock Text="起始寄存器" Width="70" VerticalAlignment="Center"/>
+                <TextBox Name="tbBeginingResAddress" Text="1" Width="100" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+                <TextBlock Text="数     量" Width="70" VerticalAlignment="Center"/>
+                <TextBox Name="tbNumOfResToRead" Text="16" Width="100" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

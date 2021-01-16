@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+说明：
+
+1.<DataPoint ... DataPointType="0" ../>
+DataPointType的值取值范围：
+
+   读寄存器        ReadByFunNum03 = 0,
+   读寄存器        ReadByFunNum01 = 1,
+   写寄存器        WriteAndReadByFunNum03 = 2,
+   写寄存器        WriteAndReadByFunNum01 = 3
+   
+2.<Module Number ="" .../>中Number值必须是唯一,不需要人工配置
+
+3.<DataPoint Number="" .../>中的Number值必须是唯一，不需要人工配置
+
+4.<DataPoint ... DataType="" ../> 
+  DataPointType可填是值有：
+    public enum DataType
+    {
+        S16,      //short
+        U16,      //ushort
+        S32,      //int
+        U32,      //uint
+        S64,      //long
+        U64,      //ulong
+        F32,      //float
+        D64,      //double
+        Bit       //Bool
+    }
+    
+ 5. <DataAnalyzeMode Value="0"/>
+    public enum DataAnalyzeMode
+    {
+        DataLowToHigh=0,
+        DataHighToLow =1
+    }
+    DataLowToHigh 表示解析数据方式： 数据低位 数据高位 数据低位 数据高位
+    DataHighToLow 表示解析数据方式： 数据高位 数据低位 数据高位 数据低位
+-->
+<ModbusConfigs>
+  <ModbusConfig>
+    <IP Value="127.0.0.1" />
+    <Port Value="502" />
+    <DataAnalyzeMode Value="DataHighToLow" />
+    <Module Number="1" Name="1#变频器" Description="1#变频器">
+      <DataPoint Number="1" DeviceAddress="001" StartingRegister="2000" DataType="U16" DataPointType="0" Name="1#变频器启动/1#变频器停机" Description="数字量点" />
+      <DataPoint Number="2" DeviceAddress="001" StartingRegister="2001" DataType="U16" DataPointType="0" Name="1#变频器报警" Description="数字量点" />
+      <DataPoint Number="3" DeviceAddress="001" StartingRegister="0010" DataType="U16" DataPointType="0" Name="变频器输出频率" Description="监控参数" />
+      <DataPoint Number="4" DeviceAddress="001" StartingRegister="0011" DataType="U16" DataPointType="0" Name="变频器输出电流" Description="监控参数" />
+      <DataPoint Number="5" DeviceAddress="001" StartingRegister="0012" DataType="U16" DataPointType="0" Name="输出转速" Description="监控参数" />
+      <DataPoint Number="6" DeviceAddress="001" StartingRegister="0013" DataType="U16" DataPointType="0" Name="输出力矩" Description="监控参数" />
+      <DataPoint Number="7" DeviceAddress="001" StartingRegister="0014" DataType="U16" DataPointType="0" Name="电机功率" Description="监控参数" />
+      <DataPoint Number="8" DeviceAddress="001" StartingRegister="0015" DataType="U32" DataPointType="0" Name="电机运行时间" Description="监控参数" />
+      <DataPoint Number="9" DeviceAddress="001" StartingRegister="0017" DataType="U16" DataPointType="0" Name="出气口压力" Description="监控参数" />
+    </Module>
+    <Module Name="2#变频器" Description="2#变频器" Number="2">
+      <DataPoint Number="10" DeviceAddress="001" StartingRegister="2002" DataType="U16" DataPointType="0" Name="2#变频器启动/2#变频器停机" Description="数字量点" />
+      <DataPoint Number="11" DeviceAddress="001" StartingRegister="2003" DataType="U16" DataPointType="0" Name="2#变频器报警" Description="数字量点" />
+      <DataPoint Number="12" DeviceAddress="001" StartingRegister="0018" DataType="U16" DataPointType="0" Name="变频器输出频率" Description="监控参数" />
+      <DataPoint Number="13" DeviceAddress="001" StartingRegister="0019" DataType="U16" DataPointType="0" Name="变频器输出电流" Description="监控参数" />
+      <DataPoint Number="14" DeviceAddress="001" StartingRegister="0020" DataType="U16" DataPointType="0" Name="输出转速" Description="监控参数" />
+      <DataPoint Number="15" DeviceAddress="001" StartingRegister="0021" DataType="U16" DataPointType="0" Name="输出力矩" Description="监控参数" />
+      <DataPoint Number="16" DeviceAddress="001" StartingRegister="0022" DataType="U16" DataPointType="0" Name="电机功率" Description="监控参数" />
+      <DataPoint Number="17" DeviceAddress="001" StartingRegister="0023" DataType="U32" DataPointType="0" Name="电机运行时间" Description="监控参数" />
+      <DataPoint Number="18" DeviceAddress="001" StartingRegister="0025" DataType="U16" DataPointType="0" Name="出气口压力" Description="监控参数" />
+    </Module>
+    <Module Number="3" Name="MTC_1#" Description="MTC_1#">
+      <DataPoint Number="19" DeviceAddress="001" StartingRegister="0026" DataType="U16" DataPointType="0" Name="1通道测量值" Description="" />
+      <DataPoint Number="20" DeviceAddress="001" StartingRegister="0027" DataType="U16" DataPointType="0" Name="2通道测量值" Description="" />
+      <DataPoint Number="21" DeviceAddress="001" StartingRegister="0028" DataType="U16" DataPointType="0" Name="3通道测量值" Description="" />
+      <DataPoint Number="22" DeviceAddress="001" StartingRegister="0029" DataType="U16" DataPointType="0" Name="4通道测量值" Description="" />
+      <DataPoint Number="23" DeviceAddress="001" StartingRegister="0030" DataType="U16" DataPointType="0" Name="5通道测量值" Description="" />
+      <DataPoint Number="24" DeviceAddress="001" StartingRegister="0031" DataType="U16" DataPointType="0" Name="6通道测量值" Description="" />
+      <DataPoint Number="25" DeviceAddress="001" StartingRegister="0032" DataType="U16" DataPointType="0" Name="7通道测量值" Description="" />
+      <DataPoint Number="26" DeviceAddress="001" StartingRegister="0033" DataType="U16" DataPointType="0" Name="8通道测量值" Description="" />
+      <DataPoint Number="27" DeviceAddress="001" StartingRegister="0082" DataType="U16" DataPointType="2" Name="1通道设定值" Description="" />
+      <DataPoint Number="28" DeviceAddress="001" StartingRegister="0083" DataType="U16" DataPointType="2" Name="2通道设定值" Description="" />
+      <DataPoint Number="29" DeviceAddress="001" StartingRegister="0084" DataType="U16" DataPointType="2" Name="3通道设定值" Description="" />
+      <DataPoint Number="30" DeviceAddress="001" StartingRegister="0085" DataType="U16" DataPointType="2" Name="4通道设定值" Description="" />
+      <DataPoint Number="31" DeviceAddress="001" StartingRegister="0086" DataType="U16" DataPointType="2" Name="5通道设定值" Description="" />
+      <DataPoint Number="32" DeviceAddress="001" StartingRegister="0087" DataType="U16" DataPointType="2" Name="6通道设定值" Description="" />
+      <DataPoint Number="33" DeviceAddress="001" StartingRegister="0088" DataType="U16" DataPointType="2" Name="7通道设定值" Description="" />
+      <DataPoint Number="34" DeviceAddress="001" StartingRegister="0089" DataType="U16" DataPointType="2" Name="8通道设定值" Description="" />
+    </Module>
+    <Module Number="4" Name="MTC_2#" Description="MTC_2#">
+      <DataPoint Number="35" DeviceAddress="001" StartingRegister="0034" DataType="U16" DataPointType="0" Name="1通道测量值" Description="" />
+      <DataPoint Number="36" DeviceAddress="001" StartingRegister="0035" DataType="U16" DataPointType="0" Name="2通道测量值" Description="" />
+      <DataPoint Number="37" DeviceAddress="001" StartingRegister="0036" DataType="U16" DataPointType="0" Name="3通道测量值" Description="" />
+      <DataPoint Number="38" DeviceAddress="001" StartingRegister="0037" DataType="U16" DataPointType="0" Name="4通道测量值" Description="" />
+      <DataPoint Number="39" DeviceAddress="001" StartingRegister="0038" DataType="U16" DataPointType="0" Name="5通道测量值" Description="" />
+      <DataPoint Number="40" DeviceAddress="001" StartingRegister="0039" DataType="U16" DataPointType="0" Name="6通道测量值" Description="" />
+      <DataPoint Number="41" DeviceAddress="001" StartingRegister="0040" DataType="U16" DataPointType="0" Name="7通道测量值" Description="" />
+      <DataPoint Number="42" DeviceAddress="001" StartingRegister="0041" DataType="U16" DataPointType="0" Name="8通道测量值" Description="" />
+      <DataPoint Number="43" DeviceAddress="001" StartingRegister="0090" DataType="U16" DataPointType="2" Name="1通道设定值" Description="" />
+      <DataPoint Number="44" DeviceAddress="001" StartingRegister="0091" DataType="U16" DataPointType="2" Name="2通道设定值" Description="" />
+      <DataPoint Number="45" DeviceAddress="001" StartingRegister="0092" DataType="U16" DataPointType="2" Name="3通道设定值" Description="" />
+      <DataPoint Number="46" DeviceAddress="001" StartingRegister="0093" DataType="U16" DataPointType="2" Name="4通道设定值" Description="" />
+      <DataPoint Number="47" DeviceAddress="001" StartingRegister="0094" DataType="U16" DataPointType="2" Name="5通道设定值" Description="" />
+      <DataPoint Number="48" DeviceAddress="001" StartingRegister="0095" DataType="U16" DataPointType="2" Name="6通道设定值" Description="" />
+      <DataPoint Number="49" DeviceAddress="001" StartingRegister="0096" DataType="U16" DataPointType="2" Name="7通道设定值" Description="" />
+      <DataPoint Number="50" DeviceAddress="001" StartingRegister="0097" DataType="U16" DataPointType="2" Name="8通道设定值" Description="" />
+    </Module>
+    <Module Number="5" Name="MTC_3#" Description="MTC_3">
+      <DataPoint Number="51" DeviceAddress="001" StartingRegister="0042" DataType="U16" DataPointType="0" Name="1通道测量值" Description="" />
+      <DataPoint Number="52" DeviceAddress="001" StartingRegister="0043" DataType="U16" DataPointType="0" Name="2通道测量值" Description="" />
+      <DataPoint Number="53" DeviceAddress="001" StartingRegister="0044" DataType="U16" DataPointType="0" Name="3通道测量值" Description="" />
+      <DataPoint Number="54" DeviceAddress="001" StartingRegister="0045" DataType="U16" DataPointType="0" Name="4通道测量值" Description="" />
+      <DataPoint Number="55" DeviceAddress="001" StartingRegister="0046" DataType="U16" DataPointType="0" Name="5通道测量值" Description="" />
+      <DataPoint Number="56" DeviceAddress="001" StartingRegister="0047" DataType="U16" DataPointType="0" Name="6通道测量值" Description="" />
+      <DataPoint Number="57" DeviceAddress="001" StartingRegister="0048" DataType="U16" DataPointType="0" Name="7通道测量值" Description="" />
+      <DataPoint Number="58" DeviceAddress="001" StartingRegister="0049" DataType="U16" DataPointType="0" Name="8通道测量值" Description="" />
+      <DataPoint Number="59" DeviceAddress="001" StartingRegister="0098" DataType="U16" DataPointType="2" Name="1通道设定值" Description="" />
+      <DataPoint Number="60" DeviceAddress="001" StartingRegister="0099" DataType="U16" DataPointType="2" Name="2通道设定值" Description="" />
+      <DataPoint Number="61" DeviceAddress="001" StartingRegister="0100" DataType="U16" DataPointType="2" Name="3通道设定值" Description="" />
+      <DataPoint Number="62" DeviceAddress="001" StartingRegister="0101" DataType="U16" DataPointType="2" Name="4通道设定值" Description="" />
+      <DataPoint Number="63" DeviceAddress="001" StartingRegister="0102" DataType="U16" DataPointType="2" Name="5通道设定值" Description="" />
+      <DataPoint Number="64" DeviceAddress="001" StartingRegister="0103" DataType="U16" DataPointType="2" Name="6通道设定值" Description="" />
+      <DataPoint Number="65" DeviceAddress="001" StartingRegister="0104" DataType="U16" DataPointType="2" Name="7通道设定值" Description="" />
+      <DataPoint Number="66" DeviceAddress="001" StartingRegister="0105" DataType="U16" DataPointType="2" Name="8通道设定值" Description="" />
+    </Module>
+    <Module Number="6" Name="MTC_4#" Description="MTC_4">
+      <DataPoint Number="67" DeviceAddress="001" StartingRegister="0050" DataType="U16" DataPointType="0" Name="1通道测量值" Description="" />
+      <DataPoint Number="68" DeviceAddress="001" StartingRegister="0051" DataType="U16" DataPointType="0" Name="2通道测量值" Description="" />
+      <DataPoint Number="69" DeviceAddress="001" StartingRegister="0052" DataType="U16" DataPointType="0" Name="3通道测量值" Description="" />
+      <DataPoint Number="70" DeviceAddress="001" StartingRegister="0053" DataType="U16" DataPointType="0" Name="4通道测量值" Description="" />
+      <DataPoint Number="71" DeviceAddress="001" StartingRegister="0054" DataType="U16" DataPointType="0" Name="5通道测量值" Description="" />
+      <DataPoint Number="72" DeviceAddress="001" StartingRegister="0055" DataType="U16" DataPointType="0" Name="6通道测量值" Description="" />
+      <DataPoint Number="73" DeviceAddress="001" StartingRegister="0056" DataType="U16" DataPointType="0" Name="7通道测量值" Description="" />
+      <DataPoint Number="74" DeviceAddress="001" StartingRegister="0057" DataType="U16" DataPointType="0" Name="8通道测量值" Description="" />
+      <DataPoint Number="75" DeviceAddress="001" StartingRegister="0106" DataType="U16" DataPointType="2" Name="1通道设定值" Description="" />
+      <DataPoint Number="76" DeviceAddress="001" StartingRegister="0107" DataType="U16" DataPointType="2" Name="2通道设定值" Description="" />
+      <DataPoint Number="77" DeviceAddress="001" StartingRegister="0108" DataType="U16" DataPointType="2" Name="3通道设定值" Description="" />
+      <DataPoint Number="78" DeviceAddress="001" StartingRegister="0109" DataType="U16" DataPointType="2" Name="4通道设定值" Description="" />
+      <DataPoint Number="79" DeviceAddress="001" StartingRegister="0110" DataType="U16" DataPointType="2" Name="5通道设定值" Description="" />
+      <DataPoint Number="80" DeviceAddress="001" StartingRegister="0111" DataType="U16" DataPointType="2" Name="6通道设定值" Description="" />
+      <DataPoint Number="81" DeviceAddress="001" StartingRegister="0112" DataType="U16" DataPointType="2" Name="7通道设定值" Description="" />
+      <DataPoint Number="82" DeviceAddress="001" StartingRegister="0113" DataType="U16" DataPointType="2" Name="8通道设定值" Description="" />
+    </Module>
+    <Module Number="7" Name="8AD_1#" Description="8AD_1#">
+      <DataPoint Number="83" DeviceAddress="001" StartingRegister="0058" DataType="U32" DataPointType="0" Name="1管道流量测量值" Description="" />
+      <DataPoint Number="84" DeviceAddress="001" StartingRegister="0060" DataType="U32" DataPointType="0" Name="2管道流量测量值" Description="" />
+      <DataPoint Number="85" DeviceAddress="001" StartingRegister="0062" DataType="U32" DataPointType="0" Name="3管道流量测量值" Description="" />
+      <DataPoint Number="86" DeviceAddress="001" StartingRegister="0064" DataType="U32" DataPointType="0" Name="4管道流量测量值" Description="" />
+      <DataPoint Number="87" DeviceAddress="001" StartingRegister="0066" DataType="U32" DataPointType="0" Name="5管道流量测量值" Description="" />
+      <DataPoint Number="88" DeviceAddress="001" StartingRegister="0068" DataType="U32" DataPointType="0" Name="6管道流量测量值" Description="" />
+      <DataPoint Number="89" DeviceAddress="001" StartingRegister="0070" DataType="U32" DataPointType="0" Name="7管道流量测量值" Description="" />
+      <DataPoint Number="90" DeviceAddress="001" StartingRegister="0072" DataType="U32" DataPointType="0" Name="8管道流量测量值" Description="" />
+    </Module>
+    <Module Number="8" Name="8AD_2#" Description="8AD_2#">
+      <DataPoint Number="91" DeviceAddress="001" StartingRegister="0074" DataType="U16" DataPointType="0" Name="1#管道出口温度" Description="" />
+      <DataPoint Number="92" DeviceAddress="001" StartingRegister="0075" DataType="U16" DataPointType="0" Name="2#管道出口温度" Description="" />
+      <DataPoint Number="93" DeviceAddress="001" StartingRegister="0076" DataType="U16" DataPointType="0" Name="3#管道出口温度" Description="" />
+      <DataPoint Number="94" DeviceAddress="001" StartingRegister="0077" DataType="U16" DataPointType="0" Name="4#管道出口温度" Description="" />
+      <DataPoint Number="95" DeviceAddress="001" StartingRegister="0078" DataType="U16" DataPointType="0" Name="5#管道出口温度" Description="" />
+      <DataPoint Number="96" DeviceAddress="001" StartingRegister="0079" DataType="U16" DataPointType="0" Name="6#管道出口温度" Description="" />
+      <DataPoint Number="97" DeviceAddress="001" StartingRegister="0080" DataType="U16" DataPointType="0" Name="7#管道出口温度" Description="" />
+      <DataPoint Number="98" DeviceAddress="001" StartingRegister="0081" DataType="U16" DataPointType="0" Name="8#管道出口温度" Description="" />
+    </Module>
+    <Module Number="9" Name="Sever1#" Description="Sever1#">
+      <DataPoint Number="99" DeviceAddress="002" StartingRegister="2004" DataType="U16" DataPointType="0" Name="原点位置标志" Description="" />
+      <DataPoint Number="100" DeviceAddress="002" StartingRegister="0114" DataType="U32" DataPointType="0" Name="伺服绝对位置" Description="" />
+    </Module>
+    <Module Number="10" Name="Sever2#" Description="Sever2#">
+      <DataPoint Number="101" DeviceAddress="002" StartingRegister="2005" DataType="U16" DataPointType="0" Name="原点位置标志" Description="" />
+      <DataPoint Number="102" DeviceAddress="002" StartingRegister="0116" DataType="U32" DataPointType="0" Name="伺服绝对位置" Description="" />
+    </Module>
+    <Module Number="11" Name="Sever3#" Description="Sever3#">
+      <DataPoint Number="103" DeviceAddress="002" StartingRegister="2006" DataType="U16" DataPointType="0" Name="原点位置标志" Description="" />
+      <DataPoint Number="104" DeviceAddress="002" StartingRegister="0118" DataType="U32" DataPointType="0" Name="伺服绝对位置" Description="" />
+    </Module>
+    <Module Number="12" Name="Sever4#" Description="Sever4#">
+      <DataPoint Number="105" DeviceAddress="002" StartingRegister="2007" DataType="U16" DataPointType="0" Name="原点位置标志" Description="" />
+      <DataPoint Number="106" DeviceAddress="002" StartingRegister="0120" DataType="U32" DataPointType="0" Name="伺服绝对位置" Description="" />
+    </Module>
+    <Module Number="13" Name="Sever5#" Description="Sever5#">
+      <DataPoint Number="107" DeviceAddress="002" StartingRegister="2008" DataType="U16" DataPointType="0" Name="原点位置标志" Description="" />
+      <DataPoint Number="108" DeviceAddress="002" StartingRegister="0122" DataType="U32" DataPointType="0" Name="伺服绝对位置" Description="" />
+    </Module>
+    <Module Number="14" Name="Sever6#" Description="Sever6#">
+      <DataPoint Number="109" DeviceAddress="002" StartingRegister="2009" DataType="U16" DataPointType="0" Name="原点位置标志" Description="" />
+      <DataPoint Number="110" DeviceAddress="002" StartingRegister="0124" DataType="U32" DataPointType="0" Name="伺服绝对位置" Description="" />
+    </Module>
+    <Module Number="15" Name="告警内容" Description="告警内容">
+      <DataPoint Number="111" DeviceAddress="001" StartingRegister="2010" DataType="U16" DataPointType="0" Name="1#输出电流过流" Description="1#变频" />
+      <DataPoint Number="112" DeviceAddress="001" StartingRegister="2011" DataType="U16" DataPointType="0" Name="1#相序错误" Description="1#变频器" />
+      <DataPoint Number="113" DeviceAddress="001" StartingRegister="2012" DataType="U16" DataPointType="0" Name="1#电机故障" Description="1#变频器" />
+      <DataPoint Number="114" DeviceAddress="001" StartingRegister="2013" DataType="U16" DataPointType="0" Name="2#输出电流过流" Description="2#变频器" />
+      <DataPoint Number="115" DeviceAddress="001" StartingRegister="2014" DataType="U16" DataPointType="0" Name="2#相序错误" Description="2#变频器" />
+      <DataPoint Number="116" DeviceAddress="001" StartingRegister="2015" DataType="U16" DataPointType="0" Name="2#电机故障" Description="2#变频器" />
+      <DataPoint Number="117" DeviceAddress="001" StartingRegister="2016" DataType="U16" DataPointType="0" Name="1#管道温度报警" Description="" />
+      <DataPoint Number="118" DeviceAddress="001" StartingRegister="2017" DataType="U16" DataPointType="0" Name="2#管道温度报警" Description="" />
+      <DataPoint Number="119" DeviceAddress="001" StartingRegister="2018" DataType="U16" DataPointType="0" Name="3#管道温度报警" Description="" />
+      <DataPoint Number="120" DeviceAddress="001" StartingRegister="2019" DataType="U16" DataPointType="0" Name="4#管道温度报警" Description="" />
+      <DataPoint Number="121" DeviceAddress="001" StartingRegister="2020" DataType="U16" DataPointType="0" Name="5#管道温度报警" Description="" />
+      <DataPoint Number="122" DeviceAddress="001" StartingRegister="2021" DataType="U16" DataPointType="0" Name="6#管道温度报警" Description="" />
+      <DataPoint Number="123" DeviceAddress="001" StartingRegister="2022" DataType="U16" DataPointType="0" Name="7#管道温度报警" Description="" />
+      <DataPoint Number="124" DeviceAddress="001" StartingRegister="2023" DataType="U16" DataPointType="0" Name="8#管道温度报警" Description="" />
+      <DataPoint Number="125" DeviceAddress="001" StartingRegister="2024" DataType="U16" DataPointType="0" Name="MTC_1#1通道温度报警" Description="" />
+      <DataPoint Number="126" DeviceAddress="001" StartingRegister="2025" DataType="U16" DataPointType="0" Name="MTC_1#2通道温度报警" Description="" />
+      <DataPoint Number="127" DeviceAddress="001" StartingRegister="2026" DataType="U16" DataPointType="0" Name="MTC_1#3通道温度报警" Description="" />
+      <DataPoint Number="128" DeviceAddress="001" StartingRegister="2027" DataType="U16" DataPointType="0" Name="MTC_1#4通道温度报警" Description="" />
+      <DataPoint Number="129" DeviceAddress="001" StartingRegister="2028" DataType="U16" DataPointType="0" Name="MTC_1#5通道温度报警" Description="" />
+      <DataPoint Number="130" DeviceAddress="001" StartingRegister="2029" DataType="U16" DataPointType="0" Name="MTC_1#6通道温度报警" Description="" />
+      <DataPoint Number="131" DeviceAddress="001" StartingRegister="2030" DataType="U16" DataPointType="0" Name="MTC_1#7通道温度报警" Description="" />
+      <DataPoint Number="132" DeviceAddress="001" StartingRegister="2031" DataType="U16" DataPointType="0" Name="MTC_1#8通道温度报警" Description="" />
+      <DataPoint Number="133" DeviceAddress="001" StartingRegister="2032" DataType="U16" DataPointType="0" Name="MTC_2#1通道温度报警" Description="" />
+      <DataPoint Number="134" DeviceAddress="001" StartingRegister="2033" DataType="U16" DataPointType="0" Name="MTC_2#2通道温度报警" Description="" />
+      <DataPoint Number="135" DeviceAddress="001" StartingRegister="2034" DataType="U16" DataPointType="0" Name="MTC_2#3通道温度报警" Description="" />
+      <DataPoint Number="136" DeviceAddress="001" StartingRegister="2035" DataType="U16" DataPointType="0" Name="MTC_2#4通道温度报警" Description="" />
+      <DataPoint Number="137" DeviceAddress="001" StartingRegister="2036" DataType="U16" DataPointType="0" Name="MTC_2#5通道温度报警" Description="" />
+      <DataPoint Number="138" DeviceAddress="001" StartingRegister="2037" DataType="U16" DataPointType="0" Name="MTC_2#6通道温度报警" Description="" />
+      <DataPoint Number="139" DeviceAddress="001" StartingRegister="2038" DataType="U16" DataPointType="0" Name="MTC_2#7通道温度报警" Description="" />
+      <DataPoint Number="140" DeviceAddress="001" StartingRegister="2039" DataType="U16" DataPointType="0" Name="MTC_2#8通道温度报警" Description="" />
+      <DataPoint Number="141" DeviceAddress="001" StartingRegister="2040" DataType="U16" DataPointType="0" Name="MTC_3#1通道温度报警" Description="" />
+      <DataPoint Number="142" DeviceAddress="001" StartingRegister="2041" DataType="U16" DataPointType="0" Name="MTC_3#2通道温度报警" Description="" />
+      <DataPoint Number="143" DeviceAddress="001" StartingRegister="2042" DataType="U16" DataPointType="0" Name="MTC_3#3通道温度报警" Description="" />
+      <DataPoint Number="144" DeviceAddress="001" StartingRegister="2043" DataType="U16" DataPointType="0" Name="MTC_3#4通道温度报警" Description="" />
+      <DataPoint Number="145" DeviceAddress="001" StartingRegister="2044" DataType="U16" DataPointType="0" Name="MTC_3#5通道温度报警" Description="" />
+      <DataPoint Number="146" DeviceAddress="001" StartingRegister="2045" DataType="U16" DataPointType="0" Name="MTC_3#6通道温度报警" Description="" />
+      <DataPoint Number="147" DeviceAddress="001" StartingRegister="2046" DataType="U16" DataPointType="0" Name="MTC_3#7通道温度报警" Description="" />
+      <DataPoint Number="148" DeviceAddress="001" StartingRegister="2047" DataType="U16" DataPointType="0" Name="MTC_3#8通道温度报警" Description="" />
+      <DataPoint Number="149" DeviceAddress="001" StartingRegister="2048" DataType="U16" DataPointType="0" Name="MTC_4#1通道温度报警" Description="" />
+      <DataPoint Number="150" DeviceAddress="001" StartingRegister="2049" DataType="U16" DataPointType="0" Name="MTC_4#2通道温度报警" Description="" />
+      <DataPoint Number="151" DeviceAddress="001" StartingRegister="2050" DataType="U16" DataPointType="0" Name="MTC_4#3通道温度报警" Description="" />
+      <DataPoint Number="152" DeviceAddress="001" StartingRegister="2051" DataType="U16" DataPointType="0" Name="MTC_4#4通道温度报警" Description="" />
+      <DataPoint Number="153" DeviceAddress="001" StartingRegister="2052" DataType="U16" DataPointType="0" Name="MTC_4#5通道温度报警" Description="" />
+      <DataPoint Number="154" DeviceAddress="001" StartingRegister="2053" DataType="U16" DataPointType="0" Name="MTC_4#6通道温度报警" Description="" />
+      <DataPoint Number="155" DeviceAddress="001" StartingRegister="2054" DataType="U16" DataPointType="0" Name="MTC_4#7通道温度报警" Description="" />
+      <DataPoint Number="156" DeviceAddress="001" StartingRegister="2055" DataType="U16" DataPointType="0" Name="MTC_4#8通道温度报警" Description="" />
+    </Module>
+  </ModbusConfig>
+</ModbusConfigs>

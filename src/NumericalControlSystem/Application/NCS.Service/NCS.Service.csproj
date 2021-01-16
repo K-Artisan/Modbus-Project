@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6825E01-9AFB-4F4D-9478-05DC57278EB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NCS.Service</RootNamespace>
+    <AssemblyName>NCS.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\ReferenceLibary\Lib\AutoMapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapper\AutoMapperBootStrapper.cs" />
+    <Compile Include="Helper\DataPointRegisterAddressCompare.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\RegisterCountCalculator.cs" />
+    <Compile Include="Mapping\DataPointHistoryDataMapper.cs" />
+    <Compile Include="Mapping\DataPointMapper.cs" />
+    <Compile Include="Mapping\ModuleMapper.cs" />
+    <Compile Include="Messaging\AbstracttResponseBase.cs" />
+    <Compile Include="Messaging\DataBaseConfigService\CreateDataBaseRequest.cs" />
+    <Compile Include="Messaging\DataBaseConfigService\CreateDataBaseResponse.cs" />
+    <Compile Include="Messaging\DataBaseConfigService\ExecuteSqlScriptRequest.cs" />
+    <Compile Include="Messaging\DataBaseConfigService\ExecuteSqlScriptResponse.cs" />
+    <Compile Include="Messaging\DataBaseConfigService\GetCurrentDataBaseLoginInfoResponse.cs" />
+    <Compile Include="Messaging\DataBaseConfigService\TestConnetDataBaseRequest.cs" />
+    <Compile Include="Messaging\DataBaseConfigService\TestConnetDataBaseResponse.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\AddDataPointHistoryDataRequst.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\AddDataPointHistoryDataResponse.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\DataPointHistoryValue.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\DeleteDataPointHistoryDataRequst.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\DeleteDataPointHistoryDataResponse.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\GetAllDataPointHistoryDataRequest.cs" />
+    <Compile Include="Messaging\ModbusConfigService\GetDataAnalyzeModeResponse.cs" />
+    <Compile Include="Messaging\ModbusConfigService\SetDataAnalyzeModeRequest.cs" />
+    <Compile Include="Messaging\ModbusConfigService\SetDataAnalyzeModeResponse.cs" />
+    <Compile Include="Messaging\ModbusService\SetDataPointValueRequest.cs" />
+    <Compile Include="Messaging\DataPointService\AddDataPointRequst.cs" />
+    <Compile Include="Messaging\DataPointService\AddDataPointResponse.cs" />
+    <Compile Include="Messaging\DataPointService\GetAllDataPointsInfoResponse.cs" />
+    <Compile Include="Messaging\ModbusService\GetAllDataPointsRealTimeDataResponse.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\GetAllDataPointsHistoryDataResponse.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\GetDataPiontHistoryDataResponse.cs" />
+    <Compile Include="Messaging\DataPointService\GetDataPointByModuleRequest.cs" />
+    <Compile Include="Messaging\DataPointService\GetDataPointByModuleResponse.cs" />
+    <Compile Include="Messaging\DataPointHistoryDataService\GetDataPointHistoryDataRequest.cs" />
+    <Compile Include="Messaging\DataPointService\GetDataPointInfoRequest.cs" />
+    <Compile Include="Messaging\DataPointService\GetDataPointInfoResponse.cs" />
+    <Compile Include="Messaging\ModbusService\GetDataPointRealTimeDataRequest.cs" />
+    <Compile Include="Messaging\ModbusService\GetDataPointRealTimeDataResponse.cs" />
+    <Compile Include="Messaging\ModbusConfigService\SetModbusConfigToDataBaseResponse.cs" />
+    <Compile Include="Messaging\ModuleService\AddModuleRequst.cs" />
+    <Compile Include="Messaging\ModuleService\AddModuleResponse.cs" />
+    <Compile Include="Messaging\ModuleService\GetAllModuleRequest.cs" />
+    <Compile Include="Messaging\ModuleService\GetAllModuleResponse.cs" />
+    <Compile Include="Messaging\ModuleService\GetModuleRequest.cs.cs" />
+    <Compile Include="Messaging\ModuleService\GetModuleResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceInterface\IDataBaseConfigService.cs" />
+    <Compile Include="ServiceInterface\IDataPointHistoryDataService.cs" />
+    <Compile Include="ServiceInterface\IDataPointRealTimeDataService.cs" />
+    <Compile Include="ServiceInterface\IDataPointService.cs" />
+    <Compile Include="ServiceInterface\IModbusConfigService.cs" />
+    <Compile Include="ServiceInterface\IModbusService.cs" />
+    <Compile Include="ServiceInterface\IModuleService.cs" />
+    <Compile Include="SeviceImplementation\DataBaseConfigService.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\AnalyzeRecivedDataReponse.cs" />
+    <Compile Include="SeviceImplementation\DataPointHistoryDataService.cs" />
+    <Compile Include="SeviceImplementation\DataPointRealTimeDataService.cs" />
+    <Compile Include="SeviceImplementation\DataPointService.cs" />
+    <Compile Include="SeviceImplementation\ModbusConfigService.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\DataPointGrouper.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\ModbusService.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\RecivedDataAnalyzer.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\RequestCommandByteStreamCreater.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\SerialPorConfigerHelper.cs" />
+    <Compile Include="SeviceImplementation\ModuleService.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\ReadRegisterCommand.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\Register.cs" />
+    <Compile Include="SeviceImplementation\ModbusService\WriteRegisterCommand.cs" />
+    <Compile Include="ViewModel\DataPoints\DataPointInfoView.cs" />
+    <Compile Include="ViewModel\DataPoints\DataPointHistoryDataView.cs" />
+    <Compile Include="ViewModel\DataPoints\DataPointRealTimeDataView.cs" />
+    <Compile Include="ViewModel\Modules\ModuleView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLogic\NCS.Model\NCS.Model.csproj">
+      <Project>{E86B0964-76A7-43E2-BAEB-6408EF740553}</Project>
+      <Name>NCS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\NCS.Infrastructure\NCS.Infrastructure.csproj">
+      <Project>{1ADBA2C9-CB28-40C5-B58D-F03F359098B3}</Project>
+      <Name>NCS.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\NCS.Repository.ADO\NCS.Repository.ADO.csproj">
+      <Project>{E2D4F3D3-6C3B-421E-9E5C-05613BB45FA0}</Project>
+      <Name>NCS.Repository.ADO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\SQLConnecter\SQLConnecter.csproj">
+      <Project>{1EE2550A-EE07-491A-BC52-001472B58ACA}</Project>
+      <Name>SQLConnecter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\UniversalDAL\UniversalDAL.csproj">
+      <Project>{FD5CF8E0-4FE7-4411-A424-B8AA231A8949}</Project>
+      <Name>UniversalDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modbus\Modbus.Common\Modbus.Common.csproj">
+      <Project>{EC3C9262-B3F4-4DC8-99FC-A18C68839DC6}</Project>
+      <Name>Modbus.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modbus\Modbus.Contract\Modbus.Contract.csproj">
+      <Project>{83802AE5-5592-4B50-9DE1-C1D0CCD38334}</Project>
+      <Name>Modbus.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modbus\Modbus.RTU\Modbus.RTU.csproj">
+      <Project>{5C9EAB7B-39F6-4E39-8FCF-BC4EBDDD3156}</Project>
+      <Name>Modbus.RTU</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

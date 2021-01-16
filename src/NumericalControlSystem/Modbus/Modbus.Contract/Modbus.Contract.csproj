@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83802AE5-5592-4B50-9DE1-C1D0CCD38334}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modbus.Contract</RootNamespace>
+    <AssemblyName>Modbus.Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRCVerification.cs" />
+    <Compile Include="FunctionNumType.cs" />
+    <Compile Include="IModbusProtocol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OperatingRegisteMaxNumOneTime.cs" />
+    <Compile Include="ReceiveDataEventArgs.cs" />
+    <Compile Include="RequestDataBase\CustomerRequstDataAuxiliary.cs" />
+    <Compile Include="RequestDataBase\DataAnalyzeMode.cs" />
+    <Compile Include="RequestDataBase\FunNum01CustomerRequestData.cs" />
+    <Compile Include="RequestDataBase\FunNum03CustomerRequestData.cs" />
+    <Compile Include="RequestDataBase\FunNum05CustomerRequestData.cs" />
+    <Compile Include="RequestDataBase\FunNum06CustomerRequestData.cs" />
+    <Compile Include="RequestDataBase\FunNum15CustomerRequestData.cs" />
+    <Compile Include="RequestDataBase\FunNum15RequestDataBase.cs" />
+    <Compile Include="RequestDataBase\FunNum01RequestDataBase.cs" />
+    <Compile Include="RequestDataBase\FunNum03RequestDataBase.cs" />
+    <Compile Include="RequestDataBase\FunNum05RequestDataBase.cs" />
+    <Compile Include="RequestDataBase\FunNum06RequestDataBase.cs" />
+    <Compile Include="RequestDataBase\FunNum16CustomerRequestData.cs" />
+    <Compile Include="RequestDataBase\FunNum16RequestDataBase.cs" />
+    <Compile Include="RequestDataBase\IFunNumRequestDataBase.cs" />
+    <Compile Include="RequestDataBase\ICustomerRequestData.cs" />
+    <Compile Include="RequestDataBase\IGenericCustomerRequestData.cs" />
+    <Compile Include="RequstDataEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modbus.Common\Modbus.Common.csproj">
+      <Project>{EC3C9262-B3F4-4DC8-99FC-A18C68839DC6}</Project>
+      <Name>Modbus.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

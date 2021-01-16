@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="NCS.Model.DataPointHistoryData"
+        assembly="NCS.Model">
+  <class name="DataPointHistoryData" table="numericalcontrolsystem.datapointhistorydata" lazy="true" >
+    <id name="Id" column="DatapointHistoryDataId"  type="Guid" unsaved-value="0">
+      <generator class="guid" />
+    </id>
+    <property name="DataPointId" type="Int32">
+      <column name="DataPointId" sql-type="int" not-null="true" />
+    </property>
+    <property name="DateTime" type="DateTime ">
+      <column name="DateTime" sql-type="dateTime "/>
+    </property>
+    <property name="Value" type="Double ">
+      <column name="Value" sql-type="double"/>
+    </property>
+    <many-to-one name="DataPoint" column="DataPointId"
+             class="DataPoint" not-null="true"/>
+  </class>
+</hibernate-mapping>
